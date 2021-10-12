@@ -27,6 +27,9 @@ export class EnvelopeProxy extends Object {
       result = await handler.bind(actor)(actor, msg, ctx)
       this.#sender?.ref().send(result)
     }
+    else {
+      await Promise.resolve()
+    }
     this.unpin()
     return result
   }
