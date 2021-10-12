@@ -1,0 +1,13 @@
+{
+  "name": "acti-js",
+  "version": "0.1.1",
+  "main": "index.ts",
+  "license": "MIT",
+  "author": {
+    "name": "hitomikrgr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kirigirihitomi/acti-js.git"
+  }
+}
