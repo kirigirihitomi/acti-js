@@ -68,7 +68,7 @@ export class Receiver extends Object {
 
     let [tx, rx] = oneshotCannel()
     this.#inner.ref().recvTask.register(tx)
-    env = await rx.recv() && this.#inner.ref().messageQueue.dequeue()
+    env = (await rx.recv()) as any && this.#inner.ref().messageQueue.dequeue()
     return this.#completed ? undefined // return undefined if recv completed
       : env?.toProxy() // return the message after singal receives
   }
